@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <!-- Optimalizované SEO Meta Tagy pro Českou republiku -->
+    <title>PureAloe: Organický Aloe Vera Gel | Přírodní Péče pro Vaši Pleť</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zažijte zklidňující dotek přírody s PureAloe. Náš 100% organický Aloe Vera gel hloubkově hydratuje, regeneruje a zanechává pleť svěží. Ideální pro citlivou pokožku, po slunění či holení. Objednejte online." />
+    <meta name="keywords" content="aloe vera gel, organické aloe vera, přírodní kosmetika, bio kosmetika, péče o pleť, hydratační gel, zklidnění pokožky, péče po opalování, gel na popáleniny, citlivá pleť, akné, regenerace pleti, PureAloe, česká republika" />
+    <meta name="author" content="PureAloe" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://purealoe.cz/" />
+    <meta name="theme-color" content="#3A5B4F">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://purealoe.cz/" />
+    <meta property="og:title" content="PureAloe - Čistá Síla Přírody pro Vaši Pokožku" />
+    <meta property="og:description" content="Náš 100% organický Aloe Vera gel hloubkově hydratuje, zklidňuje a regeneruje. Objednejte ještě dnes!" />
+    <meta property="og:image" content="/assets/social-image.jpg" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:site_name" content="PureAloe" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://purealoe.cz/" />
+    <meta property="twitter:title" content="PureAloe - Čistá Síla Přírody pro Vaši Pokožku" />
+    <meta property="twitter:description" content="Náš 100% organický Aloe Vera gel hloubkově hydratuje, zklidňuje a regeneruje. Objednejte ještě dnes!" />
+    <meta property="twitter:image" content="/assets/social-image.jpg" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand': {
+                'cream': '#F0FFF4',
+                'green': '#61B56E',
+                'green-dark': '#3A5B4F',
+                'text': '#333333',
+                'accent': '#D1E7DD',
+              }
+            },
+            fontFamily: {
+              sans: ['"Nunito Sans"', 'sans-serif'],
+              serif: ['"Playfair Display"', 'serif'],
+            },
+            keyframes: {
+              'float': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+            },
+            boxShadow: {
+              'soft': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)',
+              'soft-lg': '0 20px 40px -15px rgba(0, 0, 0, 0.1)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .font-serif h1, .font-serif h2, .font-serif h3, .font-serif h4, .font-serif h5, .font-serif h6 {
+        font-family: 'Playfair Display', serif;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;1,6..12,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <script id="stripe-js" src="https://js.stripe.com/v3/" async></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "path": "https://aistudiocdn.com/path@^0.12.7",
+    "vite": "https://aistudiocdn.com/vite@^7.1.5",
+    "stripe": "https://aistudiocdn.com/stripe@^18.5.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <!-- Načtení zkompilované a funkční aplikace -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

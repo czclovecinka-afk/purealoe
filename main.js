@@ -1,3 +1,12 @@
+Paráda, chápu. Abys nemusel nic upravovat, zde je **kompletní, upravený soubor** `main.js`. Stačí ho zkopírovat a vložit do svého projektu, a pak ho nahrát na GitHub.
+
+-----
+
+### **Opravený soubor `main.js`**
+
+Tento kód je již upravený, aby správně odkazoval na tvůj back-end na Vercelu a měl opravené chyby s kontaktním formulářem.
+
+```javascript
 import React from "https://esm.sh/react@18.3.1";
 import ReactDOM from "https://esm.sh/react-dom@18.3.1/client";
 
@@ -167,7 +176,9 @@ const ContactForm = () => {
             if (response.ok) {
                 setStatus('success');
                 setFormMessage('Zpráva byla úspěšně odeslána! Děkujeme.');
-                event.currentTarget.reset();
+                if (event.currentTarget) { // Zde je oprava, která brání chybě
+                    event.currentTarget.reset();
+                }
             } else {
                 setStatus('error');
                 setFormMessage('Něco se pokazilo. Zkuste to prosím znovu.');
@@ -487,3 +498,4 @@ const App = () => {
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
 root.render(e(React.StrictMode, null, e(App)));
+```

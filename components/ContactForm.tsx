@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 
-// DŮLEŽITÉ: Nahraďte tuto URL adresou z vašeho účtu na službě pro zpracování formulářů (např. Formspree).
-// Přejděte na https://formspree.io/, vytvořte si účet a nový formulář.
-// Získáte unikátní URL, kterou vložíte sem.
 const FORM_SUBMIT_URL = 'https://formspree.io/f/xovnznqd';
 
 const ContactForm: React.FC = () => {
@@ -16,7 +13,6 @@ const ContactForm: React.FC = () => {
 
         const formData = new FormData(e.currentTarget);
         
-        // Přidáme skryté pole pro předmět e-mailu pro lepší přehlednost
         formData.append('_subject', `Nový dotaz z PureAloe od ${formData.get('name')}`);
 
         try {
@@ -31,7 +27,9 @@ const ContactForm: React.FC = () => {
             if (response.ok) {
                 setStatus('success');
                 setFormMessage('Zpráva byla úspěšně odeslána! Děkujeme.');
-                e.currentTarget.reset();
+                if (e.currentTarget) { // Zde je oprava
+                    e.currentTarget.reset();
+                }
             } else {
                 setStatus('error');
                 setFormMessage('Něco se pokazilo. Zkuste to prosím znovu.');
